@@ -1,74 +1,60 @@
-# def hello():
-#     print('\tHello, Python!')
-#
-# def helloint():
-#     print('\t',  77)
-#
-# print('처음 하는 함수 호출 hello()')
-# hello()
-# print('함수 호출 hello()이후')
-#
-# print(1)
-# print(helloint)
-# helloint()
-# print(3)
 
-# def hello(name):
-#     print('안녕, {}!'.format(name))
-#
-# hello('수빈')
-# sname = '현수'
-# hello(sname)
+def hello(name):
+    print('안녕, {}!'.format(name))
+
+hello('수빈')
+sname = '현수'
+hello(sname)
 
 
-# def hello(name = '여러분'):
-#     print('안녕, {}!'.format(name))
-#
-# hello()
-# hello('헌철')
+def hello(name = '여러분'):
+    print('안녕, {}!'.format(name))
+
+hello()
+hello('헌철')
 
 
-# def mysum(x, y = 0):
-#     return x + y
-#
-# hap = mysum(5)
-# print(hap)
-# hap = mysum(5, 10)
-# print(hap)
+def mysum(x, y = 0):
+    return x + y
+
+hap = mysum(5)
+print(hap)
+hap = mysum(5, 10)
+print(hap)
 
 #
-# def ctofatrenhite(cels):
-#     return cels * 9/5 + 32
-#
-# def ftocelsius(fahr):
-#     return (fahr - 32) * 5/9
-#
-# for cels in range(28, 35, 2):
-#     print('섭씨" {}, 화씨: {:.2f}'.format(cels, ctofatrenhite(cels)))
-#
-#
-# for fahr in range(90,103, 3):
-#     print('섭씨" {:.2f}, 화씨: {}'.format(ftocelsius(fahr), fahr))
+def ctofatrenhite(cels):
+    return cels * 9/5 + 32
+
+def ftocelsius(fahr):
+    return (fahr - 32) * 5/9
+
+for cels in range(28, 35, 2):
+    print('섭씨" {}, 화씨: {:.2f}'.format(cels, ctofatrenhite(cels)))
 
 
-# def addone():
-#     i = 30
-#     i += 1
-#     print('\t지역변수 i:',i)
-#
-# i = 20
-# print('i:',i)
-# addone()
-# print('i',i)
+for fahr in range(90,103, 3):
+    print('섭씨" {:.2f}, 화씨: {}'.format(ftocelsius(fahr), fahr))
 
 
-# def addone():
-#     print('\t 전역 변수 i 읽기, i + 1: ', i + 1)
-#
-# i = 20
-# print('i = ', i)
-# addone()
-# print('i = ', i)
+def addone():
+    i = 30
+    i += 1
+    print('\t지역변수 i:',i)
+
+i = 20
+print('i:',i)
+addone()
+print('i',i)
+
+
+def addone():
+    print('\t 전역 변수 i 읽기, i + 1: ', i + 1)
+
+i = 20
+print('i = ', i)
+addone()
+print('i = ', i)
 
 
 # def addone():
@@ -81,44 +67,44 @@
 # addone()
 # print('i = ', i)
 
-# def hello(*names):
-#     for each in names:
-#         print('안녕, {}!'.format(each))
-#
-# hello('나타샤')
-# hello('수빈', '현수', '지효')
-# hello(*['방탄소년단', '여자친구'])
-#
+def hello(*names):
+    for each in names:
+        print('안녕, {}!'.format(each))
 
-# def mykeyprint(**kwargs):
-#     for key in kwargs:
-#         print('{}: {} '.format(key, kwargs[key]), end = ' ')
-#     print()
-#
-#
-# mykeyprint(여자친구=6, 마마무=4)
-# mykeyprint(엑소=9, 트와이스=9, 블랙핑크=4, 방탄소년단=7)
-#
-# coffeeprint = {'에소프레소':2500, '아메리카노':2800, '카페라테':3200}
-# mycar = {"brand": "현대", "model":"제네시스", "year":2016}
-# mykeyprint(**coffeeprint)
-# mykeyprint(**mycar)
+hello('나타샤')
+hello('수빈', '현수', '지효')
+hello(*['방탄소년단', '여자친구'])
 
 
+def mykeyprint(**kwargs):
+    for key in kwargs:
+        print('{}: {} '.format(key, kwargs[key]), end = ' ')
+    print()
+
+
+mykeyprint(여자친구=6, 마마무=4)
+mykeyprint(엑소=9, 트와이스=9, 블랙핑크=4, 방탄소년단=7)
+
+coffeeprint = {'에소프레소':2500, '아메리카노':2800, '카페라테':3200}
+mycar = {"brand": "현대", "model":"제네시스", "year":2016}
+mykeyprint(**coffeeprint)
+mykeyprint(**mycar)
+
+
 
 
 #
-# def sumvalue(value, **kwargs):
-#     hap = value
-#     for key in kwargs:
-#         hap += kwargs[key]
-#     return hap
-#
-# coffeeprint = {'에소프레소':2500, '아메리카노':2800, '카페라테':3200}
-# print(sumvalue(1000, **coffeeprint))
-# print(sumvalue(value = 2000, **coffeeprint))
-# print(sumvalue(**coffeeprint, value = 2000))
-#
+def sumvalue(value, **kwargs):
+    hap = value
+    for key in kwargs:
+        hap += kwargs[key]
+    return hap
+
+coffeeprint = {'에소프레소':2500, '아메리카노':2800, '카페라테':3200}
+print(sumvalue(1000, **coffeeprint))
+print(sumvalue(value = 2000, **coffeeprint))
+print(sumvalue(**coffeeprint, value = 2000))
+
 
 
 
